@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HiltCustomComponent.iml" filepath="$PROJECT_DIR$/.idea/HiltCustomComponent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HiltCustomComponent.iml" filepath="$PROJECT_DIR$/.idea/modules/HiltCustomComponent.iml" group="HiltCustomComponent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="HiltCustomComponent/app" />
     </modules>
   </component>
 </project>

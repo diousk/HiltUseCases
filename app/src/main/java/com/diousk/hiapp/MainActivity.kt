@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.diousk.hiapp.di.CustomComponentManager
+import com.diousk.hiapp.di.custom.CustomComponentManager
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

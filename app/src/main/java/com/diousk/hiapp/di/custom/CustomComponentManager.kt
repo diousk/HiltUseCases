@@ -1,32 +1,27 @@
-package com.diousk.hiapp.di
+package com.diousk.hiapp.di.custom
 
 import android.util.Log
 import com.diousk.hiapp.deps.CustomDep
-import dagger.hilt.EntryPoint
 import dagger.hilt.EntryPoints
-import dagger.hilt.InstallIn
 import javax.inject.Inject
 import javax.inject.Singleton
-
-@EntryPoint
-@InstallIn(CustomComponent::class)
-interface CustomEntryPoint {
-    fun getCustomDep(): CustomDep
-}
 
 @Singleton
 class CustomComponentManager @Inject constructor(
     private val componentBuilder: CustomComponentBuilder
 ) {
 
-    var component: CustomComponent? = null
-        private set
+    private var component: CustomComponent? = null
 
     fun init() {
         component = componentBuilder.build()
     }
 
-    fun getDep()= EntryPoints.get(component, CustomEntryPoint::class.java).getCustomDep()
+    fun getDep(): CustomDep {
+        val entryPoint = EntryPoints.get(component, CustomEntryPoint::class.java)
+        Log.d("CustomComponentManager", "entryPoint = $entryPoint")
+        return entryPoint.getCustomDep()
+    }
 
     fun clear() {
         component = null

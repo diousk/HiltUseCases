@@ -10,3 +10,9 @@ class CustomDepImpl @Inject constructor() : CustomDep {
         Log.d("CustomDepImpl", "init this = $this")
     }
 }
+
+class CustomDepImpl2 @Inject constructor() : CustomDep {
+    init {
+        Log.d("CustomDepImpl2", "init this = $this")
+    }
+}

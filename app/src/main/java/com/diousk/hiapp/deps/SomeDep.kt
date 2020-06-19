@@ -1,12 +1,13 @@
 package com.diousk.hiapp.deps
 
-import android.util.Log
+import timber.log.Timber
 import javax.inject.Inject
+import javax.inject.Singleton
 
 interface SomeDep
 
 class SomeDepImpl @Inject constructor() : SomeDep {
     init {
-        Log.d("SomeDepImpl", "init this = $this")
+        Timber.d("init this = $this")
     }
 }

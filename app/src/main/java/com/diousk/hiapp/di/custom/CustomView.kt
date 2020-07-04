@@ -16,8 +16,4 @@ class CustomView @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, attr) {
 
     @Inject lateinit var someDep: SomeDep
-
-    init {
-        Timber.d("init with someDep $someDep")
-    }
 }

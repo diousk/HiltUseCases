@@ -1,13 +1,10 @@
 package com.diousk.hiapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import com.diousk.hiapp.deps.SomeDep
-import com.diousk.hiapp.di.custom.CustomComponentManager
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import javax.inject.Inject
@@ -21,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Timber.d("someDep $someDep")
+
+        // demo for using @EntryPoint
+        LegacyDemoObject(this)
     }
 }
 
